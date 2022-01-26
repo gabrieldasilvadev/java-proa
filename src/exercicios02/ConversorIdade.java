@@ -15,12 +15,16 @@ public class ConversorIdade {
         System.out.println("Informe a quantidade de dias:");
         int dias = sc.nextInt();
 
-        int anosParaDias = idade*365;
-        int mesesParaDias = meses*30;
+        int anosParaDias = idade * 365;
+        int mesesParaDias = meses * 30;
 
         int idadeEmDias = anosParaDias + mesesParaDias + dias;
+        int anosEmDias = anosParaDias;
+        int mesesEmDias = mesesParaDias;
 
         System.out.println("A idade informada tem " + idadeEmDias + " dias no total");
+        System.out.println("A idade informada em apenas anos tem " + anosEmDias + " dias no total");
+        System.out.println("A idade informada em apenas meses tem " + mesesEmDias + " dias no total");
     }
 }
 

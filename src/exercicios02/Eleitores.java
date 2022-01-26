@@ -17,20 +17,24 @@ public class Eleitores {
         System.out.println("Informe a quantidade de votos validos:");
         int votosValidos = sc.nextInt();
 
-        int totalEleitores = votosBrancos + votosNulos + votosValidos;
-        System.out.println("Quantidade total de eleitores: " + totalEleitores);
 
-        float porcentagemVotosBrancos = (float) ((votosBrancos*100)/totalEleitores);
-        porcentagemVotosBrancos = Float.parseFloat(df.format(porcentagemVotosBrancos));
-        System.out.println("Porcentagem dos votos brancos: " + porcentagemVotosBrancos);
+        double totalEleitores = (votosBrancos + votosNulos + votosValidos);
+        int intTotalEleitores = (int) totalEleitores;
 
-        float porcentagemVotosNulos = (float) ((votosNulos*100)/totalEleitores);
-        porcentagemVotosNulos = Float.parseFloat(df.format(porcentagemVotosNulos));
-        System.out.println("Porcentagem dos votos nulos: " + porcentagemVotosNulos);
+        System.out.println("Quantidade total de eleitores: " + intTotalEleitores);
 
-        double porcentagemVotosValidos = (float) ((votosValidos*100)/totalEleitores);
+        double porcentagemVotosBrancos =  (votosBrancos/totalEleitores)*100;
+        porcentagemVotosBrancos = Double.parseDouble(df.format(porcentagemVotosBrancos));
+        System.out.println("Porcentagem dos votos brancos: " + porcentagemVotosBrancos+"%");
+
+        double porcentagemVotosNulos =  (votosNulos/totalEleitores)*100;
+        porcentagemVotosNulos = Double.parseDouble(df.format(porcentagemVotosNulos));
+        System.out.println("Porcentagem dos votos nulos: " + porcentagemVotosNulos+"%");
+
+
+        double porcentagemVotosValidos =  (votosValidos/totalEleitores)*100;
         porcentagemVotosValidos = Double.parseDouble(df.format(porcentagemVotosValidos));
-        System.out.println("Porcentagem dos votos validos: " + porcentagemVotosValidos);
+        System.out.println("Porcentagem dos votos validos: " + porcentagemVotosValidos+"%");
 
     }
 }
