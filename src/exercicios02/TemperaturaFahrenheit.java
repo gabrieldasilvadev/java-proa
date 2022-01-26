@@ -7,11 +7,11 @@ public class TemperaturaFahrenheit {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Informe a temperatura em Fahrenheit:");
-        float temperaturaF = sc.nextFloat();
+        double temperaturaFahrenheit  = sc.nextFloat();
 
-        float temperaturaC = (float) ((temperaturaF - 32) / 1.8);
+        double temperaturaCelcius = ((temperaturaFahrenheit - 32) / 1.8);
 
-        System.out.println("Conversao para Celcius: " + temperaturaC);
+        System.out.println("Conversao para Celcius: " + temperaturaCelcius);
     }
 }
 

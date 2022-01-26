@@ -6,10 +6,12 @@ public class SalarioVendedor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        double comissao = 0.05;
-
+        // Entrada
         System.out.println("Informe o valor do salario fixo:");
         double salarioFixo = sc.nextDouble();
+
+        System.out.println("Informe um valor fixo para a comissao de cada venda de carro:");
+        double comissao = sc.nextDouble();
 
         System.out.println("Informe o valor da venda:");
         double valorVenda = sc.nextDouble();
@@ -17,14 +19,17 @@ public class SalarioVendedor {
         System.out.println("Informe quantos carros foram vendidos:");
         int carrosVendidos = sc.nextInt();
 
-        double bonusVenda = valorVenda * comissao;
-        System.out.println("Bonus da venda: " + bonusVenda);
+        // Processamento
+        double bonusCarroVendido = carrosVendidos * comissao;
+        System.out.println("Bonus da comissao: " + bonusCarroVendido);
 
-        double bonusTotal = bonusVenda * carrosVendidos;
-        System.out.println("Bonus total: " + bonusTotal);
+        double bonusVenda = valorVenda * 0.05;
+        System.out.println("Bonus de venda: " + bonusVenda);
 
-        double salarioFinal = salarioFixo + bonusTotal;
-        System.out.println("Salario final do funcionario: " + salarioFinal + "R$");
+        double valorFinal = salarioFixo + bonusCarroVendido + bonusVenda;
+
+        //Saida
+        System.out.println("Salario final do funcionario: " + valorFinal + "R$");
     }
 }
 
