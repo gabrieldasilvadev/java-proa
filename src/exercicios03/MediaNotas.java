@@ -8,13 +8,13 @@ public class MediaNotas {
 
         System.out.println("Informe as notas do aluno:");
         System.out.println("Primeira nota:");
-        double nota1 = sc.nextDouble();
+        float nota1 = sc.nextFloat();
         System.out.println("Segunda nota:");
-        double nota2 = sc.nextDouble();
+        float nota2 = sc.nextFloat();
         System.out.println("Terceira nota:");
-        double nota3 = sc.nextDouble();
+        float nota3 = sc.nextFloat();
         System.out.println("Quarta nota:");
-        double nota4 = sc.nextDouble();
+        float nota4 = sc.nextFloat();
 
         double media = (nota1+nota2+nota3+nota4) / 4;
 

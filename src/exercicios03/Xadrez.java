@@ -14,6 +14,12 @@ public class Xadrez {
 
         int duracao = horaFim - horaInicio;
 
+        int diaSeguinte = horaInicio + horaFim;
+
+        if(diaSeguinte >= 24) {
+            System.out.println("Dia seguinte!");
+        }
+
         if( duracao > 24) {
             System.out.println("Excedeu o tempo limite de jogo!");
         }
